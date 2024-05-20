@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  ruby:
+    build: .
+    image: bugsnag
+    volumes:
+      - .:/app:cached
+      - /app/tmp/cache
+      - share:/usr/local/bundle
+    #ports:
+    #  - 3050:3000
+    tty: true
+    stdin_open: true
+    user: root
+    env_file:
+      - .env
+    environment:
+      - BUGSNAG_PERSONAL_AUTH_TOKEN=${BUGSNAG_PERSONAL_AUTH_TOKEN}
+
+volumes:
+  share:
+

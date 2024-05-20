@@ -18,6 +18,33 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 TODO: Write usage instructions here
 
+## Usage on docker integration
+
+First, you can setup doker compose.
+
+```shell
+docker compose build
+```
+
+Configure the environment variables.
+
+```shell
+cp .env.skeleton .env
+# Edit auth token
+vi .env
+```
+
+After setup, you can run it.
+
+```shell
+docker compose up -d
+docker compose exec ruby bash
+bugsnag_error_event_downloader
+# or
+docker compose run --rm ruby bash
+bugsnag_error_event_downloader
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
