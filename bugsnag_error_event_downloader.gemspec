@@ -45,9 +45,12 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("pry")
   spec.add_development_dependency("pry-byebug")
   spec.add_development_dependency("rspec")
+  spec.add_development_dependency("rspec-sorbet")
   spec.add_development_dependency("rubocop")
   spec.add_development_dependency("rubocop-shopify")
   spec.add_development_dependency("simplecov")
+  spec.add_development_dependency("sorbet")
+  spec.add_development_dependency("tapioca")
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

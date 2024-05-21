@@ -19,6 +19,9 @@
 require "simplecov"
 SimpleCov.start
 
+require "rspec/sorbet"
+RSpec::Sorbet.allow_doubles!
+
 require "bugsnag_error_event_downloader"
 
 RSpec.configure do |config|
